@@ -46,13 +46,3 @@ FROM base as bot-only
 
 # Run the bot
 CMD ["python", "main.py"]
-
-# Development stage with additional tools
-FROM base as development
-
-USER root
-RUN pip install --no-cache-dir pytest black flake8 mypy
-USER app
-
-# Development command
-CMD ["python", "web_status.py"]
