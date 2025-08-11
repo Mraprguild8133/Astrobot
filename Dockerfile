@@ -39,7 +39,7 @@ RUN pip install --no-cache-dir gunicorn
 USER app
 
 # Production command
-CMD ["gunicorn", "--bind", "44.229.227.142:5000", "--workers", "2", "--timeout", "60", "web_status:app"]
+CMD ["gunicorn", "--bind", "54.188.71.94:5000", "--workers", "2", "--timeout", "60", "web_status:app"]
 
 # Bot-only stage for running just the Telegram bot
 FROM base as bot-only
