@@ -1,0 +1,92 @@
+version: '3.8'
+
+services:
+  # Telegram Bot Service
+  astrogeminibot:
+    build:
+      context: .
+      target: bot-only
+    container_name: astrogeminibot
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY}
+      - ADMIN_USER_IDS=${ADMIN_USER_IDS}
+      - DEFAULT_AI_SERVICE=gemini
+      - DEFAULT_MODEL=gemini-2.5-flash
+      - RATE_LIMIT_REQUESTS=10
+      - RATE_LIMIT_WINDOW=60
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - bot-network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import os; exit(0 if os.path.exists('bot.log') else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Web Status Dashboard Service
+  web-status:
+    build:
+      context: .
+      target: production
+    container_name: astrogeminibot-dashboard
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY}
+      - ADMIN_USER_IDS=${ADMIN_USER_IDS}
+      - DEFAULT_AI_SERVICE=gemini
+      - DEFAULT_MODEL=gemini-2.5-flash
+      - RATE_LIMIT_REQUESTS=10
+      - RATE_LIMIT_WINDOW=60
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - bot-network
+    depends_on:
+      - astrogeminibot
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Development Service (optional)
+  dev:
+    build:
+      context: .
+      target: development
+    container_name: astrogeminibot-dev
+    ports:
+      - "5001:5000"
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY}
+      - ADMIN_USER_IDS=${ADMIN_USER_IDS}
+      - FLASK_ENV=development
+    volumes:
+      - .:/app
+      - ./logs:/app/logs
+    networks:
+      - bot-network
+    profiles:
+      - dev
+
+networks:
+  bot-network:
+    driver: bridge
+
+volumes:
+  logs:
+    driver: local

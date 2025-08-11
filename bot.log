@@ -1,0 +1,234 @@
+2025-08-11 08:28:33 - utils.logging_config - INFO - Logging initialized - Level: INFO, File: bot.log
+2025-08-11 08:28:33 - utils.logging_config - INFO - AstroGeminiBot logging started at 2025-08-11 08:28:33.870802
+2025-08-11 08:28:33 - __main__ - ERROR - Fatal error: TELEGRAM_BOT_TOKEN environment variable is required
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 30, in main
+    bot = AstroGeminiBot()
+          ^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/bot.py", line 30, in __init__
+    self.config = Config()
+                  ^^^^^^^^
+  File "/home/runner/workspace/config.py", line 23, in __init__
+    raise ValueError("TELEGRAM_BOT_TOKEN environment variable is required")
+ValueError: TELEGRAM_BOT_TOKEN environment variable is required
+2025-08-11 08:28:45 - utils.logging_config - INFO - Logging initialized - Level: INFO, File: bot.log
+2025-08-11 08:28:45 - utils.logging_config - INFO - AstroGeminiBot logging started at 2025-08-11 08:28:45.721005
+2025-08-11 08:28:45 - __main__ - ERROR - Fatal error: TELEGRAM_BOT_TOKEN environment variable is required
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 30, in main
+    bot = AstroGeminiBot()
+          ^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/bot.py", line 30, in __init__
+    self.config = Config()
+                  ^^^^^^^^
+  File "/home/runner/workspace/config.py", line 23, in __init__
+    raise ValueError("TELEGRAM_BOT_TOKEN environment variable is required")
+ValueError: TELEGRAM_BOT_TOKEN environment variable is required
+2025-08-11 08:30:02 - utils.logging_config - INFO - Logging initialized - Level: INFO, File: bot.log
+2025-08-11 08:30:02 - utils.logging_config - INFO - AstroGeminiBot logging started at 2025-08-11 08:30:02.796188
+2025-08-11 08:30:04 - services.gemini_service - INFO - Gemini service initialized
+2025-08-11 08:30:04 - config - INFO - Gemini service initialized successfully
+2025-08-11 08:30:04 - services.together_service - INFO - Together AI service initialized
+2025-08-11 08:30:04 - config - INFO - Together AI service initialized successfully
+2025-08-11 08:30:04 - config - INFO - Configuration loaded. Available services: ['gemini', 'together']
+2025-08-11 08:30:04 - rate_limiter - INFO - Rate limiter initialized: 10 requests per 60s
+2025-08-11 08:30:04 - utils.conversation_manager - INFO - Conversation manager initialized: timeout=1800s, max_length=20
+2025-08-11 08:30:04 - bot - INFO - Starting AstroGeminiBot...
+2025-08-11 08:30:04 - bot - INFO - Available AI services: gemini, together
+2025-08-11 08:30:04 - __main__ - INFO - Bot is running. Press Ctrl+C to stop.
+2025-08-11 08:31:00 - utils.logging_config - INFO - Logging initialized - Level: INFO, File: bot.log
+2025-08-11 08:31:00 - utils.logging_config - INFO - AstroGeminiBot logging started at 2025-08-11 08:31:00.562031
+2025-08-11 08:31:01 - services.gemini_service - INFO - Gemini service initialized
+2025-08-11 08:31:01 - config - INFO - Gemini service initialized successfully
+2025-08-11 08:31:01 - services.together_service - INFO - Together AI service initialized
+2025-08-11 08:31:01 - config - INFO - Together AI service initialized successfully
+2025-08-11 08:31:01 - config - INFO - Configuration loaded. Available services: ['gemini', 'together']
+2025-08-11 08:31:01 - rate_limiter - INFO - Rate limiter initialized: 10 requests per 60s
+2025-08-11 08:31:01 - utils.conversation_manager - INFO - Conversation manager initialized: timeout=1800s, max_length=20
+2025-08-11 08:31:01 - bot - INFO - Starting AstroGeminiBot...
+2025-08-11 08:31:01 - bot - INFO - Available AI services: gemini, together
+2025-08-11 08:31:01 - __main__ - INFO - Bot is running. Press Ctrl+C to stop.
+2025-08-11 08:32:15 - telegram.ext.Application - CRITICAL - Fetching updates was aborted due to CancelledError(). Suppressing exception to ensure graceful shutdown.
+Traceback (most recent call last):
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/base_events.py", line 1898, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/main.py", line 16, in signal_handler
+    sys.exit(0)
+SystemExit: 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 42, in main
+    await asyncio.sleep(1)
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 649, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telegram/ext/_application.py", line 673, in stop
+    self.__update_fetcher_task.result()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telegram/ext/_application.py", line 1228, in _update_fetcher
+    await self.__update_fetcher()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telegram/ext/_application.py", line 1207, in __update_fetcher
+    update = await self.update_queue.get()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+2025-08-11 08:32:15 - __main__ - INFO - Bot shutdown complete.
+2025-08-11 08:32:16 - utils.logging_config - INFO - Logging initialized - Level: INFO, File: bot.log
+2025-08-11 08:32:16 - utils.logging_config - INFO - AstroGeminiBot logging started at 2025-08-11 08:32:16.499499
+2025-08-11 08:32:17 - services.gemini_service - INFO - Gemini service initialized
+2025-08-11 08:32:17 - config - INFO - Gemini service initialized successfully
+2025-08-11 08:32:17 - services.together_service - INFO - Together AI service initialized
+2025-08-11 08:32:17 - config - INFO - Together AI service initialized successfully
+2025-08-11 08:32:17 - config - INFO - Configuration loaded. Available services: ['gemini', 'together']
+2025-08-11 08:32:17 - rate_limiter - INFO - Rate limiter initialized: 10 requests per 60s
+2025-08-11 08:32:17 - utils.conversation_manager - INFO - Conversation manager initialized: timeout=1800s, max_length=20
+2025-08-11 08:32:17 - bot - INFO - Starting AstroGeminiBot...
+2025-08-11 08:32:17 - bot - INFO - Available AI services: gemini, together
+2025-08-11 08:32:17 - __main__ - INFO - Bot is running. Press Ctrl+C to stop.
+2025-08-11 08:33:05 - telegram.ext.Application - CRITICAL - Fetching updates was aborted due to CancelledError(). Suppressing exception to ensure graceful shutdown.
+Traceback (most recent call last):
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/base_events.py", line 1898, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/main.py", line 16, in signal_handler
+    sys.exit(0)
+SystemExit: 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 42, in main
+    await asyncio.sleep(1)
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/tasks.py", line 649, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telegram/ext/_application.py", line 673, in stop
+    self.__update_fetcher_task.result()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telegram/ext/_application.py", line 1228, in _update_fetcher
+    await self.__update_fetcher()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telegram/ext/_application.py", line 1207, in __update_fetcher
+    update = await self.update_queue.get()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/asyncio/queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+2025-08-11 08:33:05 - __main__ - INFO - Bot shutdown complete.
+2025-08-11 08:33:06 - utils.logging_config - INFO - Logging initialized - Level: INFO, File: bot.log
+2025-08-11 08:33:06 - utils.logging_config - INFO - AstroGeminiBot logging started at 2025-08-11 08:33:06.203245
+2025-08-11 08:33:06 - config - INFO - Admin users configured: 1 admins
+2025-08-11 08:33:07 - services.gemini_service - INFO - Gemini service initialized
+2025-08-11 08:33:07 - config - INFO - Gemini service initialized successfully
+2025-08-11 08:33:07 - services.together_service - INFO - Together AI service initialized
+2025-08-11 08:33:07 - config - INFO - Together AI service initialized successfully
+2025-08-11 08:33:07 - config - INFO - Configuration loaded. Available services: ['gemini', 'together']
+2025-08-11 08:33:07 - rate_limiter - INFO - Rate limiter initialized: 10 requests per 60s
+2025-08-11 08:33:07 - utils.conversation_manager - INFO - Conversation manager initialized: timeout=1800s, max_length=20
+2025-08-11 08:33:07 - bot - INFO - Starting AstroGeminiBot...
+2025-08-11 08:33:07 - bot - INFO - Available AI services: gemini, together
+2025-08-11 08:33:08 - __main__ - INFO - Bot is running. Press Ctrl+C to stop.
+2025-08-11 08:33:50 - handlers.message_handlers - INFO - Message from user 6300568870 (Sathishkumar33): Hi...
+2025-08-11 08:33:50 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-11 08:33:51 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-11 08:33:52 - handlers.message_handlers - INFO - Response sent to user 6300568870 using gemini/gemini-2.5-flash
+2025-08-11 08:33:57 - handlers.command_handlers - INFO - User 6300568870 (Sathishkumar33) started the bot
+2025-08-11 08:36:21 - handlers.message_handlers - INFO - Message from user 6300568870 (Sathishkumar33): Hi...
+2025-08-11 08:36:36 - handlers.message_handlers - INFO - Response sent to user 6300568870 using together/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo
+2025-08-11 08:36:43 - handlers.message_handlers - INFO - Message from user 6300568870 (Sathishkumar33): Hi...
+2025-08-11 08:36:44 - services.together_service - ERROR - Together AI API error: 404 - Unable to access model microsoft/DialoGPT-medium. Please visit https://api.together.ai/models to view the list of supported models.
+2025-08-11 08:36:44 - services.together_service - ERROR - Together AI API error: Together AI API error: 404 - Unable to access model microsoft/DialoGPT-medium. Please visit https://api.together.ai/models to view the list of supported models.
+2025-08-11 08:36:44 - handlers.message_handlers - ERROR - Error generating response for user 6300568870: Together AI API error: 404 - Unable to access model microsoft/DialoGPT-medium. Please visit https://api.together.ai/models to view the list of supported models.
+Traceback (most recent call last):
+  File "/home/runner/workspace/handlers/message_handlers.py", line 70, in handle_text
+    response = await service.generate_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/services/together_service.py", line 125, in generate_response
+    raise e
+  File "/home/runner/workspace/services/together_service.py", line 118, in generate_response
+    raise Exception(error_msg)
+Exception: Together AI API error: 404 - Unable to access model microsoft/DialoGPT-medium. Please visit https://api.together.ai/models to view the list of supported models.
+2025-08-11 08:36:44 - handlers.message_handlers - INFO - Trying fallback service gemini for user 6300568870
+2025-08-11 08:36:44 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-11 08:36:47 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-11 08:36:48 - handlers.message_handlers - INFO - Fallback response sent to user 6300568870
+2025-08-11 08:38:15 - utils.logging_config - INFO - Logging initialized - Level: INFO, File: bot.log
+2025-08-11 08:38:15 - utils.logging_config - INFO - AstroGeminiBot logging started at 2025-08-11 08:38:15.588071
+2025-08-11 08:38:15 - config - INFO - Admin users configured: 1 admins
+2025-08-11 08:38:16 - services.gemini_service - INFO - Gemini service initialized
+2025-08-11 08:38:16 - config - INFO - Gemini service initialized successfully
+2025-08-11 08:38:16 - services.together_service - INFO - Together AI service initialized
+2025-08-11 08:38:16 - config - INFO - Together AI service initialized successfully
+2025-08-11 08:38:16 - config - INFO - Configuration loaded. Available services: ['gemini', 'together']
+2025-08-11 08:38:16 - rate_limiter - INFO - Rate limiter initialized: 10 requests per 60s
+2025-08-11 08:38:16 - utils.conversation_manager - INFO - Conversation manager initialized: timeout=1800s, max_length=20
+2025-08-11 08:38:50 - utils.logging_config - INFO - Logging initialized - Level: INFO, File: bot.log
+2025-08-11 08:38:50 - utils.logging_config - INFO - AstroGeminiBot logging started at 2025-08-11 08:38:50.971418
+2025-08-11 08:38:50 - config - INFO - Admin users configured: 1 admins
+2025-08-11 08:38:52 - services.gemini_service - INFO - Gemini service initialized
+2025-08-11 08:38:52 - config - INFO - Gemini service initialized successfully
+2025-08-11 08:38:52 - services.together_service - INFO - Together AI service initialized
+2025-08-11 08:38:52 - config - INFO - Together AI service initialized successfully
+2025-08-11 08:38:52 - config - INFO - Configuration loaded. Available services: ['gemini', 'together']
+2025-08-11 08:38:52 - rate_limiter - INFO - Rate limiter initialized: 10 requests per 60s
+2025-08-11 08:38:52 - utils.conversation_manager - INFO - Conversation manager initialized: timeout=1800s, max_length=20
+2025-08-11 08:38:56 - utils.logging_config - INFO - Logging initialized - Level: INFO, File: bot.log
+2025-08-11 08:38:56 - utils.logging_config - INFO - AstroGeminiBot logging started at 2025-08-11 08:38:56.518869
+2025-08-11 08:38:56 - config - INFO - Admin users configured: 1 admins
+2025-08-11 08:38:56 - utils.logging_config - INFO - Logging initialized - Level: INFO, File: bot.log
+2025-08-11 08:38:56 - utils.logging_config - INFO - AstroGeminiBot logging started at 2025-08-11 08:38:56.660666
+2025-08-11 08:38:56 - config - INFO - Admin users configured: 1 admins
+2025-08-11 08:38:57 - services.gemini_service - INFO - Gemini service initialized
+2025-08-11 08:38:57 - config - INFO - Gemini service initialized successfully
+2025-08-11 08:38:57 - services.gemini_service - INFO - Gemini service initialized
+2025-08-11 08:38:57 - config - INFO - Gemini service initialized successfully
+2025-08-11 08:38:57 - services.together_service - INFO - Together AI service initialized
+2025-08-11 08:38:57 - config - INFO - Together AI service initialized successfully
+2025-08-11 08:38:57 - config - INFO - Configuration loaded. Available services: ['gemini', 'together']
+2025-08-11 08:38:57 - rate_limiter - INFO - Rate limiter initialized: 10 requests per 60s
+2025-08-11 08:38:57 - utils.conversation_manager - INFO - Conversation manager initialized: timeout=1800s, max_length=20
+2025-08-11 08:38:57 - services.together_service - INFO - Together AI service initialized
+2025-08-11 08:38:57 - config - INFO - Together AI service initialized successfully
+2025-08-11 08:38:57 - config - INFO - Configuration loaded. Available services: ['gemini', 'together']
+2025-08-11 08:38:57 - rate_limiter - INFO - Rate limiter initialized: 10 requests per 60s
+2025-08-11 08:38:57 - utils.conversation_manager - INFO - Conversation manager initialized: timeout=1800s, max_length=20
+2025-08-11 08:38:57 - bot - INFO - Starting AstroGeminiBot...
+2025-08-11 08:38:57 - bot - INFO - Available AI services: gemini, together
+2025-08-11 08:38:58 - __main__ - INFO - Bot is running. Press Ctrl+C to stop.
